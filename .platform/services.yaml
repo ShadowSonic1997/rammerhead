@@ -1,0 +1,25 @@
+# Platform.sh services configuration for Rammerhead
+# This file defines additional services that your application might need
+
+# Basic Rammerhead deployment doesn't require additional services
+# Uncomment and configure services below if you need them for scaling or additional features
+
+# Redis cache service (optional, for session storage and caching)
+# rediscache:
+#   type: redis:6.0
+#   disk: 256
+
+# Database service (optional, if you want to store user data or logs)
+# database:
+#   type: postgresql:13
+#   disk: 512
+#   configuration:
+#     max_connections: 50
+
+# Elasticsearch for logging (optional, for advanced log analysis)
+# elasticsearch:
+#   type: elasticsearch:7.9
+#   disk: 1024
+
+# Note: Each service will consume additional resources and may require a paid plan
+# For basic Rammerhead functionality, no additional services are required
