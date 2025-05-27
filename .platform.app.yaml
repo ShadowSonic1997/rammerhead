@@ -16,7 +16,10 @@ build:
 
 hooks:
   build: |
-    npm install
+    # Skip problematic preinstall script and install dependencies
+    npm install --ignore-scripts
+    # Run any necessary post-install steps manually if needed
+    npm rebuild
 
 variables:
   env:
