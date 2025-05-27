@@ -1,0 +1,8 @@
+# Platform.sh routes configuration
+"https://{default}/":
+  type: upstream
+  upstream: "rammerhead:http"
+
+"https://www.{default}/":
+  type: redirect
+  to: "https://{default}/"
