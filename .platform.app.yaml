@@ -1,0 +1,32 @@
+# Platform.sh application configuration
+name: 'rammerhead'
+type: 'nodejs:18'
+
+web:
+  commands:
+    start: 'npm start'
+  locations:
+    '/':
+      passthru: true
+
+disk: 512
+
+build:
+  flavor: none
+
+hooks:
+  build: |
+    npm install
+
+variables:
+  env:
+    NODE_ENV: 'production'
+    PORT: 8080
+
+mounts:
+  'logs':
+    source: local
+    source_path: logs
+  'tmp':
+    source: local
+    source_path: tmp
